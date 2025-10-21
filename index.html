@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rutas Vocacionales Medellín — Alcaldía de Medellín</title>
+<meta name="description" content="Explora becas, apoyos y oportunidades reales en Medellín según tu propósito: trabajar, estudiar y trabajar, estudiar o emprender." />
+<style>
+  :root{
+    --blue:#004C91;
+    --orange:#F36C21;
+    --bg:#0a1220;
+    --card:#0e1a2e;
+    --muted:#c9d6e2;
+    --fg:#ffffff;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:linear-gradient(180deg,#07101f 0%, #0a1220 50%, #07101f 100%);color:var(--fg);font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", sans-serif}
+  a{color:inherit;text-decoration:none}
+  header{
+    position:sticky; top:0; z-index:20;
+    background:linear-gradient(90deg,var(--blue), #0663bf);
+    border-bottom:1px solid rgba(255,255,255,.1);
+    box-shadow:0 4px 24px rgba(0,0,0,.3);
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .logo{width:42px;height:42px;border-radius:10px;background:#fff;color:var(--blue);display:grid;place-items:center;font-weight:900;letter-spacing:-0.5px}
+  .org{font-weight:800;line-height:1}
+  .sub{font-size:.9rem;opacity:.9}
+  nav a{font-weight:700;margin-left:10px;padding:8px 12px;border-radius:999px;transition:.25s ease; border:1px solid rgba(255,255,255,.15)}
+  nav a:hover{background:rgba(255,255,255,.15)}
+  main{max-width:1080px;margin:0 auto;padding:24px 16px 96px}
+  .hero{background:linear-gradient(180deg,#0e1a2e,#0b1627);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:22px;box-shadow:0 20px 40px rgba(0,0,0,.35);display:grid;gap:12px}
+  .hero h1{font-size:1.9rem;margin:0}
+  .hero p{margin:.2rem 0;color:var(--muted)}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{padding:6px 10px;border-radius:999px;background:#0c2a4a;border:1px solid rgba(255,255,255,.12);font-size:.83rem;color:#d7e7f6}
+  .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:#0d1f38;color:#eaf4ff;font-weight:800;letter-spacing:.2px;transition:transform .15s ease, box-shadow .15s ease, background .15s ease}
+  .btn svg{width:20px;height:20px}
+  .btn:hover{transform:translateY(-1px); box-shadow:0 10px 24px rgba(0,0,0,.35); background:#102345}
+  .btn.primary{background:linear-gradient(90deg,var(--orange),#ff8b45);color:#1a120b;border:none}
+  .btn.primary:hover{transform:translateY(-1.5px) scale(1.01)}
+  section{margin-top:18px}
+  .sec{background:linear-gradient(180deg,#0e1a2e,#0b1627);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px}
+  .sec h2{margin:0 0 8px 0;font-size:1.4rem}
+  .grid{display:grid;gap:12px}
+  @media(min-width:740px){ .grid{grid-template-columns: 1fr 1fr} }
+  .card{
+    background:linear-gradient(180deg,#0f1d34,#0c182b);
+    border:1px solid rgba(255,255,255,.08); border-radius:16px; padding:14px;
+    transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+    position:relative; overflow:hidden;
+  }
+  .card::after{content:""; position:absolute; inset:auto -40% -40% auto; width:180px; height:180px; background:radial-gradient( circle at center, rgba(243,108,33,.25), transparent 60%); transform:rotate(25deg);}
+  .card:hover{ transform:translateY(-2px); box-shadow:0 16px 34px rgba(0,0,0,.45); border-color:rgba(255,255,255,.2) }
+  .card h3{margin:0 0 6px 0}
+  .hint{font-size:.9rem;color:var(--muted)}
+  .buttons{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+  .pill{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:12px;background:#0a1a31;border:1px solid rgba(255,255,255,.12);font-weight:700;transition:.18s ease}
+  .pill:hover{background:#102242; transform:translateY(-1px)}
+  .pill.orange{background:linear-gradient(90deg,var(--orange),#ff8b45);color:#1a120b;border:none}
+  .pill.orange:hover{transform:translateY(-1.5px) scale(1.01)}
+  .pill svg{width:18px;height:18px}
+  .group-title{font-weight:900; letter-spacing:.2px; margin:12px 0 6px 0; color:#e7f2ff}
+  .list{display:grid; gap:10px; grid-template-columns: 1fr}
+  .item{display:flex; align-items:center; gap:10px}
+  .item svg{width:18px;height:18px}
+  .foot{margin-top:16px; display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+  footer{max-width:1080px;margin:24px auto 40px;padding:0 16px;color:#a9c0d6;font-size:.9rem}
+  .qr{width:96px;height:96px;border-radius:10px;border:1px dashed rgba(255,255,255,.25);display:grid;place-items:center;color:#93c5fd}
+  .badge{display:inline-block;padding:4px 10px;border-radius:999px;background:#0c2a4a;color:#bfe1ff;border:1px solid rgba(255,255,255,.15);font-size:.8rem}
+  .sep{height:1px;background:linear-gradient(90deg, transparent, rgba(255,255,255,.14), transparent); margin:12px 0}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">M</div>
+      <div>
+        <div class="org">Alcaldía de Medellín — Secretaría de Educación</div>
+        <div class="sub">Rutas Vocacionales Medellín</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#trabajar">Trabajar</a>
+      <a href="#estudiar-trabajar">Estudiar y trabajar</a>
+      <a href="#estudiar">Estudiar</a>
+      <a href="#emprender">Emprender</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <span class="badge">Responsive · Hover animado · Acceso por botones</span>
+    <h1>Explora becas, apoyos y oportunidades según tu propósito</h1>
+    <p>Elige tu ruta: 💼 trabajar · 🕓 estudiar y trabajar · 🎓 estudiar · 🚀 emprender.</p>
+    <div class="chips">
+      <div class="chip">Azul & naranja Medellín</div>
+      <div class="chip">Institucional-joven</div>
+      <div class="chip">Navegación rápida</div>
+    </div>
+    <div class="cta-row">
+      <a class="btn primary" href="https://paulinagomez1-jpg.github.io/test-vocacional-medellin/" target="_blank" rel="noopener">
+        <!-- icon -->
+        <svg viewBox="0 0 24 24" fill="none"><path d="M6 19V5a2 2 0 0 1 2-2h8l4 4v12a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2Z" stroke="#1a120b" stroke-width="1.5"/><path d="M14 3v4h4" stroke="#1a120b" stroke-width="1.5"/></svg>
+        Hacer el Test Vocacional
+      </a>
+      <a class="btn" href="#trabajar">
+        <!-- icon -->
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16l-1 12H5L4 7Z" stroke="#9ec5ff" stroke-width="1.5"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" stroke="#9ec5ff" stroke-width="1.5"/></svg>
+        Ver rutas
+      </a>
+    </div>
+  </section>
+
+  <!-- RUTA 1 -->
+  <section id="trabajar" class="sec">
+    <h2>💼 Ruta 1 · Quiero trabajar</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Formaciones y oportunidades</h3>
+        <div class="buttons">
+          <a class="pill orange" href="https://arrobamedellin.edu.co/index.php/inscripciones-abiertas/" target="_blank" rel="noopener">Arroba Medellín</a>
+          <a class="pill" href="https://www.medellinjoven.com/" target="_blank" rel="noopener">Medellín Joven</a>
+          <a class="pill" href="https://www.medellin.gov.co/" target="_blank" rel="noopener">Oficina Pública de Empleo</a>
+          <a class="pill" href="https://oferta.sena.edu.co" target="_blank" rel="noopener">SENA</a>
+          <a class="pill" href="https://www.itm.edu.co/" target="_blank" rel="noopener">ITM</a>
+          <a class="pill" href="https://pascualbravo.edu.co/" target="_blank" rel="noopener">Pascual Bravo</a>
+        </div>
+        <div class="sep"></div>
+        <div class="group-title">Apoyos y becas</div>
+        <div class="buttons">
+          <a class="pill" href="https://sapiencia.gov.co/" target="_blank" rel="noopener">Fondos Sapiencia</a>
+          <a class="pill" href="https://prosperidadsocial.gov.co/jea/" target="_blank" rel="noopener">Jóvenes en Acción (DPS)</a>
+          <a class="pill" href="https://www.medellin.gov.co/es/medellin-me-cuida/" target="_blank" rel="noopener">Medellín Me Cuida Jóvenes</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>¿Qué puedes hacer?</h3>
+        <ul class="list">
+          <li class="item"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12h18" stroke="#9ec5ff" stroke-width="1.5"/><path d="M12 3l3 3-3 3" stroke="#9ec5ff" stroke-width="1.5"/></svg> Explorar vacantes y ferias de empleo del Distrito.</li>
+          <li class="item"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14" stroke="#9ec5ff" stroke-width="1.5"/><path d="M5 12h14" stroke="#9ec5ff" stroke-width="1.5"/></svg> Inscribirte a cursos cortos gratuitos (TIC, inglés, Excel).</li>
+          <li class="item"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l4 4 12-12" stroke="#9ec5ff" stroke-width="1.5"/></svg> Pedir asesoría de empleabilidad juvenil.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- RUTA 2 -->
+  <section id="estudiar-trabajar" class="sec">
+    <h2>🕓 Ruta 2 · Quiero estudiar y trabajar pronto</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Programas duales / flexibles</h3>
+        <div class="buttons">
+          <a class="pill orange" href="https://oferta.sena.edu.co" target="_blank" rel="noopener">SENA (formación dual / prácticas)</a>
+          <a class="pill" href="https://sapiencia.gov.co/becas-tecnologias-alcaldia-de-medellin/" target="_blank" rel="noopener">Becas Tecnologías (Sapiencia)</a>
+          <a class="pill" href="https://www.itm.edu.co/" target="_blank" rel="noopener">ITM</a>
+          <a class="pill" href="https://pascualbravo.edu.co/" target="_blank" rel="noopener">Pascual Bravo</a>
+          <a class="pill" href="https://arrobamedellin.edu.co/index.php/inscripciones-abiertas/" target="_blank" rel="noopener">Arroba Medellín</a>
+          <a class="pill" href="https://www.udea.edu.co/" target="_blank" rel="noopener">Camino UdeA</a>
+          <a class="pill" href="https://pascualbravo.edu.co/preuniversitario/" target="_blank" rel="noopener">Conexión Bravo</a>
+        </div>
+        <div class="sep"></div>
+        <div class="group-title">Apoyos económicos</div>
+        <div class="buttons">
+          <a class="pill" href="https://sapiencia.gov.co" target="_blank" rel="noopener">Fondos Sapiencia</a>
+          <a class="pill" href="https://prosperidadsocial.gov.co/jea/" target="_blank" rel="noopener">Jóvenes en Acción</a>
+          <a class="pill" href="https://www.medellin.gov.co/es/medellin-me-cuida/" target="_blank" rel="noopener">Medellín Me Cuida Jóvenes</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>¿Qué puedes hacer?</h3>
+        <ul class="list">
+          <li class="item"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l4 4 12-12" stroke="#9ec5ff" stroke-width="1.5"/></svg> Inscribirte a una tecnología con práctica empresarial.</li>
+          <li class="item"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12h18" stroke="#9ec5ff" stroke-width="1.5"/></svg> Alternar estudio y trabajo con programas duales.</li>
+          <li class="item"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14" stroke="#9ec5ff" stroke-width="1.5"/><path d="M5 12h14" stroke="#9ec5ff" stroke-width="1.5"/></svg> Fortalecer inglés y TIC mientras cursas tu programa.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- RUTA 3 -->
+  <section id="estudiar" class="sec">
+    <h2>🎓 Ruta 3 · Quiero dedicarme a estudiar</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Dónde estudiar (IES del Distrito)</h3>
+        <div class="buttons">
+          <a class="pill orange" href="https://sapiencia.gov.co/matricula-cero/" target="_blank" rel="noopener">Sapiencia · Matrícula Cero</a>
+          <a class="pill" href="https://www.udea.edu.co/" target="_blank" rel="noopener">Universidad de Antioquia</a>
+          <a class="pill" href="https://www.itm.edu.co/" target="_blank" rel="noopener">ITM</a>
+          <a class="pill" href="https://pascualbravo.edu.co/" target="_blank" rel="noopener">Pascual Bravo</a>
+          <a class="pill" href="https://www.politecnicojic.edu.co/" target="_blank" rel="noopener">Politécnico JIC</a>
+        </div>
+        <div class="sep"></div>
+        <div class="group-title">Becas y preparación</div>
+        <div class="buttons">
+          <a class="pill" href="https://sapiencia.gov.co/" target="_blank" rel="noopener">Fondos Sapiencia</a>
+          <a class="pill" href="https://www.fundacionsura.com/" target="_blank" rel="noopener">Beca Nicanor Restrepo</a>
+          <a class="pill" href="https://www.udea.edu.co/" target="_blank" rel="noopener">Preparación Vida Universitaria (UdeA)</a>
+          <a class="pill" href="https://arrobamedellin.edu.co/index.php/inscripciones-abiertas/" target="_blank" rel="noopener">Arroba Medellín (Inglés/TIC)</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>¿Qué puedes hacer?</h3>
+        <ul class="list">
+          <li class="item"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l4 4 12-12" stroke="#9ec5ff" stroke-width="1.5"/></svg> Postularte a becas y líneas condonables.</li>
+          <li class="item"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12h18" stroke="#9ec5ff" stroke-width="1.5"/></svg> Elegir un programa alineado a tu perfil vocacional.</li>
+          <li class="item"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14" stroke="#9ec5ff" stroke-width="1.5"/><path d="M5 12h14" stroke="#9ec5ff" stroke-width="1.5"/></svg> Prepararte académica y emocionalmente para el ingreso.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- RUTA 4 -->
+  <section id="emprender" class="sec">
+    <h2>🚀 Ruta 4 · Quiero emprender</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Acompañamiento y capital</h3>
+        <div class="buttons">
+          <a class="pill orange" href="https://www.rutanmedellin.org" target="_blank" rel="noopener">Ruta N</a>
+          <a class="pill" href="https://parquee.co/" target="_blank" rel="noopener">Parque E (UdeA)</a>
+          <a class="pill" href="https://www.creame.com.co/" target="_blank" rel="noopener">CREAme</a>
+          <a class="pill" href="https://www.fondoemprender.com" target="_blank" rel="noopener">Fondo Emprender (SENA)</a>
+          <a class="pill" href="https://www.medellinjoven.com/" target="_blank" rel="noopener">Medellín Joven</a>
+          <a class="pill" href="https://arrobamedellin.edu.co/index.php/inscripciones-abiertas/" target="_blank" rel="noopener">Arroba Medellín</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>¿Qué puedes hacer?</h3>
+        <ul class="list">
+          <li class="item"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l4 4 12-12" stroke="#9ec5ff" stroke-width="1.5"/></svg> Incubar tu idea y validar problema/solución.</li>
+          <li class="item"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12h18" stroke="#9ec5ff" stroke-width="1.5"/></svg> Postularte a capital semilla y mentorías.</li>
+          <li class="item"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14" stroke="#9ec5ff" stroke-width="1.5"/><path d="M5 12h14" stroke="#9ec5ff" stroke-width="1.5"/></svg> Formarte en habilidades digitales clave para emprender.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>🔗 Cierre</h2>
+    <p class="hint">Sugerencia: agrega este sitio a tu QR general para que los estudiantes accedan desde el móvil. También deja a mano el botón del test.</p>
+    <div class="buttons">
+      <a class="pill orange" href="https://paulinagomez1-jpg.github.io/test-vocacional-medellin/" target="_blank" rel="noopener">Ir al Test Vocacional</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div>© Alcaldía de Medellín — Secretaría de Educación · “Descubre tu rumbo, construye tu futuro”.</div>
+</footer>
+</body>
+</html>
